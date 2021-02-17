@@ -58,9 +58,9 @@ app.use(notFoundError)
 app.use(globalErrorHandler)
 
 // set our port
-app.set('port', process.env.port || 5000);
+app.set('PORT', process.env.PORT || 5000);
 
-// start listening on our port
-const server = app.listen(app.get('port'),'0.0.0.0', () => {
-  console.log(`Express server is listening on port ${server.address().port}`);
+// start listening on our PORT
+const server = app.listen(app.get('PORT'),'0.0.0.0', () => {
+  console.log(`Express server is listening on PORT ${server.address().PORT}`);
 });
